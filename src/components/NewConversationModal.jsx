@@ -15,7 +15,7 @@ export default function NewConversationModal({closeModal}) {
     closeModal()
   }
 
-  function handleCheckBoxChange(contactId) {
+  function handleCheckboxChange(contactId) {
     // selectedContactIds is initialized as an empty array, so it checks whether the selected id is alrealy in the list or not
     setSelectedContactIds(prevSelectedContactIds => {
       // if it is already present then we will remove it from the list
@@ -42,7 +42,7 @@ export default function NewConversationModal({closeModal}) {
                       // value of value will be true or false depending on whether the selected contact is checked or not, this is for checkbox
                       value={selectedContactIds.includes(contact.id)}
                       label={contact.name}
-                      onChange={() => handleCheckBoxChange(contact.id)}
+                      onChange={() => handleCheckboxChange(contact.id)}
                     />
                   </Form.Group>
                 ))}
