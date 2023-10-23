@@ -11,7 +11,7 @@ function App() {
   const dashboard = (
     // the dashboard has now access to the contacts and createContact function
     <ContactsProvider>
-      <ConversationsProvider>
+      <ConversationsProvider id={id}>
         <Dashboard id={id}/>
       </ConversationsProvider>
     </ContactsProvider>
